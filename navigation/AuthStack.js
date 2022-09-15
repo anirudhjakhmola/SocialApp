@@ -7,6 +7,7 @@ import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {View} from 'react-native';
+import {WEBKEY} from '../env';
 const Stack = createStackNavigator();
 
 const AuthStack = () => {
@@ -23,8 +24,7 @@ const AuthStack = () => {
     });
 
     GoogleSignin.configure({
-      webClientId:
-        '54256398600-vuhmdt7nehsbrtbifiopkq4g3pnqules.apps.googleusercontent.com',
+      webClientId: WEBKEY,
     });
   }, []);
 
